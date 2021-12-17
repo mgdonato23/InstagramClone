@@ -55,6 +55,6 @@ export class AcessoComponent implements OnInit {
   ngOnInit() {}
 
   exibirPainel(event: string) {
-    this.cadastro = event === 'login' ? false : true;
+    this.cadastro = event === 'cadastro' ? true : false;
   }
 }
