@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AcessoComponent } from './acesso/acesso.component';
 import { HomeComponent } from './home/home.component';
+import { AutenticacaoGuardService } from './service/autenticacao-guard.service';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AutenticacaoGuardService]
   },
 ];
 

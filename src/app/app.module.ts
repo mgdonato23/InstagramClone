@@ -12,6 +12,7 @@ import { AutenticacaoService } from './service/autenticacao.service';
 import { HomeComponent } from './home/home.component';
 import { PublicacoesComponent } from './home/publicacoes/publicacoes.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AutenticacaoGuardService } from './service/autenticacao-guard.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [AutenticacaoService],
+  providers: [AutenticacaoService, AutenticacaoGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
