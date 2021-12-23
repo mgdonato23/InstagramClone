@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { PublicacoesComponent } from './home/publicacoes/publicacoes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AutenticacaoGuardService } from './service/autenticacao-guard.service';
+import { IncluirPublicacaoComponent } from './home/incluir-publicacao/incluir-publicacao.component';
+import { BdService } from './service/bd.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { AutenticacaoGuardService } from './service/autenticacao-guard.service';
     LoginComponent,
     HomeComponent,
     PublicacoesComponent,
+    IncluirPublicacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { AutenticacaoGuardService } from './service/autenticacao-guard.service';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [AutenticacaoService, AutenticacaoGuardService],
+  providers: [AutenticacaoService, AutenticacaoGuardService, BdService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
